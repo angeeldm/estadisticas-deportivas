@@ -57,12 +57,17 @@ print("Promedio de goles por partido:", round(promedio_goles, 2))
 
 
 tabla_posiciones.to_csv("resultados/tabla_posiciones.csv")
+#Guardo las posiciones en un nuevo CSV
 
 tabla_posiciones["puntos"].plot(kind="bar", title="Puntos por equipo")
+#Grafico de barras usando la columna de puntos
 plt.xlabel("Equipos")
+#Equipos en las coordenada X
 plt.ylabel("Puntos")
+#Puntos en la coordenada Y
 plt.xticks(rotation=45)
 
 plt.savefig("resultados/grafico_puntos.png")
+#Guardo el grafico en formato PNG
 plt.show()
 
