@@ -1,4 +1,5 @@
 import pandas as pd
+import matplotlib.pyplot as plt
 
 df = pd.read_csv("datos/dataset.csv")
 df.head()
@@ -53,3 +54,20 @@ promedio_goles = df["total_goles"].mean()
 print("Promedio de goles por partido:", round(promedio_goles, 2))
 #Calculo el promedio de goles por partido sumando 
 #los valores de cada fila correspondiente
+
+
+tabla_posiciones.to_csv("resultados/tabla_posiciones.csv")
+#Guardo las posiciones en un nuevo CSV
+
+tabla_posiciones["puntos"].plot(kind="bar", title="Puntos por equipo")
+#Grafico de barras usando la columna de puntos
+plt.xlabel("Equipos")
+#Equipos en las coordenada X
+plt.ylabel("Puntos")
+#Puntos en la coordenada Y
+plt.xticks(rotation=45)
+
+plt.savefig("resultados/grafico_puntos.png")
+#Guardo el grafico en formato PNG
+plt.show()
+
