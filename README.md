@@ -16,3 +16,9 @@ Este proyecto tiene como objetivo analizar datos de resultados deportivos corres
 El dataset se obtuvo de la URL https://datahub.io/football/english-premier-league
 Los datos relevantes usados para el proyecto son:
 HomeTeam	AwayTeam	FTHG	FTAG	FTR
+
+
+#Instrucciones para ejecutar en Colab
+!git clone https://github.com/angeeldm/estadisticas-deportivas.git
+%cd estadisticas-deportivas
+!python scripts/analisis_datos.py
